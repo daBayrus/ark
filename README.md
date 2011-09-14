@@ -1,32 +1,29 @@
+*WARNING*: This document is a combination of business and technical ideas.
+
 # Project Ark
 
 ark - Act of Random Kindness
 
-# The Grand Vision
+# Problem
 
-Everyone, in one way or another, wants to help improve our country and address the many social problems plaguing us. Project Ark wants to connect people with ideas and determination to people with resource and desire to help.
+Everyone, in one way or another, wants to help improve our country and address the many social problems plaguing us. Many have ideas to solve specific problems but lack the resources and help to execute those ideas. While a greater number are waiting for activities that interest them and to which they can help. Project Ark wants to connect people with ideas and determination to people with resource and desire to help.
 
-As an organization of volunteers, we help projects get funded and executed as planned.
-
+As a web-based application, it allows projects to get funded and and to accept volunteers. As an organization, we help in the execution of the project and ensure transparency and accountability in the use of donor money.
 
 ## Guiding Principle: Ideas worth doing.
 
 ## Design/Implementation Guides
 
-* Integrate facebook and twitter from the very beginning - login, like, 
-  sharing, commenting. 
-* *Feedback*. It should be easy for leaders to update donors on the 
-  progress of the project or to say "Thank You".
-* Transparency. As an organization, we must ensure donations are not
-  misused and accountability and transparency are enforced.
-
+* Integrate facebook and twitter from the very beginning - login, like, sharing, commenting. 
+* It should be easy for leaders to update donors on the progress of the project or to say "Thank You".
+* Transparency. As an organization, we must ensure donations are not misused and accountability and transparency are enforced.
 
 ## People
 
 * *Donor*. Someone who gives money.  Every donor can have her own donor page that list all projects she funded.
 * *Group*. A group could be a corporation or a non-profit that endorses projects. For example, Google will have a page (much like the donor page) 
   that list 20 projects. Google employees can then choose from the page what projects to give to.  The group page will show who are the top donors.
-* *Leader*. Someone who has an idea that needs funding.
+* *Leader*. Someone who has an idea that needs funding and volunteers.
 * *Volunteer*. Someone who volunteers to help execute the project. For example, in a scholarship project, the volunteer can help in buying the materials, or a volunteer can help in documenting the progress.
 * *Moderators*. Authorized website user that flags if projects are inappropriate.
 
@@ -42,8 +39,9 @@ Design notes: “Start a project” and “Pledge” are primary actions in the 
 
 Note: We deduct a 5% to the project cost to cover credit card transaction fees, etc. Project leaders should be made aware of this when they are estimating project cost. Donors should also be informed of this arrangement.
 
-*Give a pledge*. The user can pledge amount not less than $5.  The list is presented as $5, $10, $20, and an input box (for other amounts). In the  pledge page, there is a clear explanation that “this is just a pledge and that no money will be deducted yet. When the project meets its target amount, only then the amount is deducted from your credit card.”  After clicking ‘Next’, the user is asked if they also want to donate to Project Ark. The amount is presented as  $2, $5 and an input box. Clicking ‘Next’ will take the user to the credit card page. After processing the payment, the user is asked if she wants to post to her wall “the support for this project X”.
-Every user will have page that list all projects she supported.
+*Give a pledge*. The user can pledge amount not less than $5.  The list is presented as $5, $10, $20, and an input box (for other amounts). In the  pledge page, there is a clear explanation that “this is just a pledge and that no money will be deducted yet. When the project meets its target amount, only then the amount is deducted from your credit card.”  After clicking ‘Next’, the user is asked if they also want to donate to Project Ark. The amount is presented as  $2, $5 and an input box. Clicking ‘Next’ will take the user to the credit card page. After processing the payment, the user is asked if she wants to post to her wall “the support for this project X”. Every user will have page that list all projects she supported.
+
+**RISK**. I am not sure if this flow can be supported by Paypal or by other payment gateways in a cheap manner. Alternatively, we can just store the pledge and then email the donor later with a link to Paypal (or etc.) for payment.
 
 *Collect pledges*. When the project has met 50% of its target funding, we notify all pledgers of the status and ask if they want to pleadge additional money for the project.
 100% of funding. We notify all pledgers that we are now going to charge their credit cards for the amount of $x. If they also donated to project ark, we will also include that amount as separate item (but in the credit card charge, it can just be 1 transaction). After charging their credit card, we will send an email receipt. [Does this mean we have to be legally registered as non-profit]?
@@ -86,6 +84,22 @@ Group-related cases are for further discussions.
 
 *Scale*. How can we get more people involve?
 
+## Risks
+
+* How can we ensure transparency and accountability? What to do if there is fund misuse?
+* Credit card transactions will become too costly to support. (Thus, do we enfore a 5% markup from the get go?)
+
+
+## Business Assumptions
+
+## Product Assumptions
+
+## Conversion Assumptions
+
+
+## MVP's
+
+# 
 
 ## Components
 * payment, record pledge, collect amount
