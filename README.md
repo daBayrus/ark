@@ -101,7 +101,10 @@ Group-related cases are for further discussions.
 
 ## MVP's
 
-# 
+1. *Start a project and collect pledges*. Since projects are expected to be created at least 1 month before it's deadline, we have a month to learn if people are willing to pledge and/or volunteer. If we get traction, we shall implement the pledge collection.
+
+2. *Group accounts with focus on corporations' social responsibility
+   programs*.
 
 ## Components
 * payment, record pledge, collect amount
