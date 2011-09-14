@@ -43,9 +43,11 @@ Note: We deduct a 5% to the project cost to cover credit card transaction fees, 
 
 **RISK**. I am not sure if this flow can be supported by Paypal or by other payment gateways in a cheap manner. Alternatively, we can just store the pledge and then email the donor later with a link to Paypal (or etc.) for payment.
 
-*Collect pledges*. When the project has met 50% of its target funding, we notify all pledgers of the status and ask if they want to pleadge additional money for the project.
-100% of funding. We notify all pledgers that we are now going to charge their credit cards for the amount of $x. If they also donated to project ark, we will also include that amount as separate item (but in the credit card charge, it can just be 1 transaction). After charging their credit card, we will send an email receipt. [Does this mean we have to be legally registered as non-profit]?
-Deadline comes, < 100% funding. We will inform project leader if she wants to extend the project. If they extend the project,  we will notify all pledgers if they want to continue with their pledge. Pledgers can choose to continue with the project, cancel the project, or give pledge to ark and let us choose project for them.
+*Collect pledges*. 
+
+* When the project has met 50% of its target funding, we notify all pledgers of the status and ask if they want to pleadge additional money for the project.
+* 100% of funding. We notify all pledgers that we are now going to charge their credit cards for the amount of $x. If they also donated to project ark, we will also include that amount as separate item (but in the credit card charge, it can just be 1 transaction). After charging their credit card, we will send an email receipt. [Does this mean we have to be legally registered as non-profit]?
+* Deadline comes, < 100% funding. We will inform project leader if she wants to extend the project. If they extend the project,  we will notify all pledgers if they want to continue with their pledge. Pledgers can choose to continue with the project, cancel the project, or give pledge to ark and let us choose project for them.
 
 *Share project*. Facebook or Twitter button that posts the link to the current page to facebook or twitter.
 
@@ -107,6 +109,8 @@ Group-related cases are for further discussions.
 
 ## Risks
 
+###
+* leaders and donors will be turned-off by the 5% markup
 ### Technical Risks
 * use of payment gateway that allows pledges - i.e. collect payment info now, collect money later.
 * credit card transactions will be too costly.
