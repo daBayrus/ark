@@ -32,32 +32,32 @@ As an organization of volunteers, we help projects get funded and executed as pl
 
 ## Use cases
 
-* *Registering a user*. User can register and login using their Facebook or Twitter account. Actually, there is no registration page. Just ask the user to login via Facebook or Twitter. Sharing a project or making a pledge does not need logging-in though.
+*Registering a user*. User can register and login using their Facebook or Twitter account. Actually, there is no registration page. Just ask the user to login via Facebook or Twitter. Sharing a project or making a pledge does not need logging-in though.
 
-* *Start a project* Registered users start a project.  A project requires a name, amount of money needed, deadline, and detailed description. Project can also have a number of attachments (e.g. PDF of cost breakdown), images, and videos to help convince donors. Video will be the primary way of presenting an idea. If the project has no video presentation after 1 month of creating the project, the project will be flagged as incomplete.
+*Start a project* Registered users start a project.  A project requires a name, amount of money needed, deadline, and detailed description. Project can also have a number of attachments (e.g. PDF of cost breakdown), images, and videos to help convince donors. Video will be the primary way of presenting an idea. If the project has no video presentation after 1 month of creating the project, the project will be flagged as incomplete.
 
-  Design notes: Projects are presented like a gallery of videos
+Design notes: Projects are presented like a gallery of videos
 
-  Design notes: “Start a project” and “Pledge” are primary actions in the app. These buttons are included even if the user is not registered. If the user clicks on the button, we check if the user is registered or not. If not registered, we ask for Facebook registration.
+Design notes: “Start a project” and “Pledge” are primary actions in the app. These buttons are included even if the user is not registered. If the user clicks on the button, we check if the user is registered or not. If not registered, we ask for Facebook registration.
 
-  Note: We deduct a 5% to the project cost to cover credit card transaction fees, etc. Project leaders should be made aware of this when they are estimating project cost. Donors should also be informed of this arrangement.
+Note: We deduct a 5% to the project cost to cover credit card transaction fees, etc. Project leaders should be made aware of this when they are estimating project cost. Donors should also be informed of this arrangement.
 
-* *Give a pledge*. The user can pledge amount not less than $5.  The list is presented as $5, $10, $20, and an input box (for other amounts). In the  pledge page, there is a clear explanation that “this is just a pledge and that no money will be deducted yet. When the project meets its target amount, only then the amount is deducted from your credit card.”  After clicking ‘Next’, the user is asked if they also want to donate to Project Ark. The amount is presented as  $2, $5 and an input box. Clicking ‘Next’ will take the user to the credit card page. After processing the payment, the user is asked if she wants to post to her wall “the support for this project X”.
+*Give a pledge*. The user can pledge amount not less than $5.  The list is presented as $5, $10, $20, and an input box (for other amounts). In the  pledge page, there is a clear explanation that “this is just a pledge and that no money will be deducted yet. When the project meets its target amount, only then the amount is deducted from your credit card.”  After clicking ‘Next’, the user is asked if they also want to donate to Project Ark. The amount is presented as  $2, $5 and an input box. Clicking ‘Next’ will take the user to the credit card page. After processing the payment, the user is asked if she wants to post to her wall “the support for this project X”.
 Every user will have page that list all projects she supported.
 
-* *Collect pledges*. When the project has met 50% of its target funding, we notify all pledgers of the status and ask if they want to pleadge additional money for the project.
+*Collect pledges*. When the project has met 50% of its target funding, we notify all pledgers of the status and ask if they want to pleadge additional money for the project.
 100% of funding. We notify all pledgers that we are now going to charge their credit cards for the amount of $x. If they also donated to project ark, we will also include that amount as separate item (but in the credit card charge, it can just be 1 transaction). After charging their credit card, we will send an email receipt. [Does this mean we have to be legally registered as non-profit]?
 Deadline comes, < 100% funding. We will inform project leader if she wants to extend the project. If they extend the project,  we will notify all pledgers if they want to continue with their pledge. Pledgers can choose to continue with the project, cancel the project, or give pledge to ark and let us choose project for them.
 
-* *Share project*. Facebook or Twitter button that posts the link to the current page to facebook or twitter.
+*Share project*. Facebook or Twitter button that posts the link to the current page to facebook or twitter.
 
-* *Moderate a project*. Some registered users will have capability to flag as inappropriate projects created. All flagged projects will not appear in the public listings. The project leader will not be notified the project is flagged but he can see the status when she logs in.
+*Moderate a project*. Some registered users will have capability to flag as inappropriate projects created. All flagged projects will not appear in the public listings. The project leader will not be notified the project is flagged but he can see the status when she logs in.
 
-  When flagging, the moderators must include a reason why the projects was flagged.  All moderators can see the reasons for flagging.
+When flagging, the moderators must include a reason why the projects was flagged.  All moderators can see the reasons for flagging.
 
-* *Joining as volunteer*. A registered user can join a project as a volunteer. The project leader can accept/decline the volunteer. If she gets accepted, volunteer is notified. It also means the leader can view the volunteer’s name and email.
+*Joining as volunteer*. A registered user can join a project as a volunteer. The project leader can accept/decline the volunteer. If she gets accepted, volunteer is notified. It also means the leader can view the volunteer’s name and email.
 
-* Group-related cases are for further discussions.
+Group-related cases are for further discussions.
 
 ## Relevant Pages
 
