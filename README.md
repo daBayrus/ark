@@ -39,14 +39,12 @@ Design notes: “Start a project” and “Pledge” are primary actions in the 
 
 Note: We deduct a 5% to the project cost to cover credit card transaction fees, etc. Project leaders should be made aware of this when they are estimating project cost. Donors should also be informed of this arrangement.
 
-*Give a pledge*. The user can pledge amount not less than $5.  The list is presented as $5, $10, $20, and an input box (for other amounts). In the  pledge page, there is a clear explanation that “this is just a pledge and that no money will be deducted yet. When the project meets its target amount, only then the amount is deducted from your credit card.”  After clicking ‘Next’, the user is asked if they also want to donate to Project Ark. The amount is presented as  $2, $5 and an input box. Clicking ‘Next’ will take the user to the credit card page. After processing the payment, the user is asked if she wants to post to her wall “the support for this project X”. Every user will have page that list all projects she supported.
-
-**RISK**. I am not sure if this flow can be supported by Paypal or by other payment gateways in a cheap manner. Alternatively, we can just store the pledge and then email the donor later with a link to Paypal (or etc.) for payment.
+*Give a pledge*. The user can pledge amount not less than $5.  The list is presented as $5, $10, $20, and an input box (for other amounts). In the  pledge page, there is a clear explanation that “this is just a pledge and that no money will be deducted yet. When the project meets its target amount, we will notify you for collection.”  After clicking ‘Next’, the user is asked if they also want to donate to Project Ark. The amount is presented as  $2, $5 and an input box. Next, the user is asked if she wants to post to her wall “the support for this project X”.
 
 *Collect pledges*. 
 
 * When the project has met 50% of its target funding, we notify all pledgers of the status and ask if they want to pleadge additional money for the project.
-* 100% of funding. We notify all pledgers that we are now going to charge their credit cards for the amount of $x. If they also donated to project ark, we will also include that amount as separate item (but in the credit card charge, it can just be 1 transaction). After charging their credit card, we will send an email receipt. [Does this mean we have to be legally registered as non-profit]?
+* 100% of funding. We notify all pledgers that we are now going to collect their pleadge of amount of $x. If they also donated to project ark, we will also include that amount as separate item (but in the credit card charge, it can just be 1 transaction). After charging their credit card, we will send an email receipt. [Does this mean we have to be legally registered as non-profit]?
 * Deadline comes, < 100% funding. We will inform project leader if she wants to extend the project. If they extend the project,  we will notify all pledgers if they want to continue with their pledge. Pledgers can choose to continue with the project, cancel the project, or give pledge to ark and let us choose project for them.
 
 *Share project*. Facebook or Twitter button that posts the link to the current page to facebook or twitter.
@@ -55,7 +53,7 @@ Note: We deduct a 5% to the project cost to cover credit card transaction fees, 
 
 When flagging, the moderators must include a reason why the projects was flagged.  All moderators can see the reasons for flagging.
 
-*Joining as volunteer*. A registered user can join a project as a volunteer. The project leader can accept/decline the volunteer. If she gets accepted, volunteer is notified. It also means the leader can view the volunteer’s name and email.
+*Joining as volunteer*. A registered user can join a project as a volunteer. The leader can view the volunteer’s name and email.
 
 Group-related cases are for further discussions.
 
@@ -86,11 +84,6 @@ Group-related cases are for further discussions.
 
 *Scale*. How can we get more people involve?
 
-## Risks
-
-* How can we ensure transparency and accountability? What to do if there is fund misuse?
-* Credit card transactions will become too costly to support. (Thus, do we enfore a 5% markup from the get go?)
-
 
 ## Business Assumptions
 
@@ -103,20 +96,21 @@ Group-related cases are for further discussions.
 
 1. *Start a project and collect pledges*. Since projects are expected to be created at least 1 month before it's deadline, we have a month to learn if people are willing to pledge and/or volunteer. If we get traction, we shall implement the pledge collection.
 
-2. *Group accounts with focus on corporations' social responsibility
-   programs*.
-
-## Components
-* payment, record pledge, collect amount
-* project status - 
+2. *Group accounts*.
 
 ## Risks
 
-###
-* leaders and donors will be turned-off by the 5% markup
+### Business Risks
+
+* Project leaders and donors will be turned-off by the 5% markup.
+* Payment gateway surchage becomes prohibited.
+* How can we ensure transparency and accountability? What to do if there is fund misuse?
+*
 ### Technical Risks
-* use of payment gateway that allows pledges - i.e. collect payment info now, collect money later.
-* credit card transactions will be too costly.
+
+## Components
+* Pledge. Tracking of pledges, collection, followups, and receipts.
+* Social Network. Integration with facebook and twitter.
 
 
 
