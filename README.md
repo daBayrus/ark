@@ -19,34 +19,34 @@ as planned.
 
 ## Design/Implementation Guides
 
-# Integrate facebook and twitter from the very beginning - login, like, 
-sharing, commenting. 
-# *Feedback*. It should be easy for leaders to update donors on the 
-progress of the project or to say "Thank You".
-# Transparency. As an organization, we must ensure donations are not
-misused and accountability and transparency are enforced.
+* Integrate facebook and twitter from the very beginning - login, like, 
+  sharing, commenting. 
+* *Feedback*. It should be easy for leaders to update donors on the 
+  progress of the project or to say "Thank You".
+* Transparency. As an organization, we must ensure donations are not
+  misused and accountability and transparency are enforced.
 
 
 ## People
 
-# *Donor*. Someone who gives money.  Every donor can have her own donor 
-page that list all projects she funded.
-# *Group*. A group could be a corporation or a non-profit that endorses 
-projects. For example, Google will have a page (much like the donor page) 
-that list 20 projects. Google employees can then choose from the page 
-what projects to give to.  The group page will show who are the top donors.
-# *Leader*. Someone who has an idea that needs funding.
-# *Volunteer*. Someone who volunteers to help execute the project. For
-example, in a scholarship project, the volunteer can help in buying the 
-materials, or a volunteer can help in documenting the progress.
-# *Moderators*. Authorized website user that flags if projects are inappropriate.
+* *Donor*. Someone who gives money.  Every donor can have her own donor 
+  page that list all projects she funded.
+* *Group*. A group could be a corporation or a non-profit that endorses 
+  projects. For example, Google will have a page (much like the donor page) 
+  that list 20 projects. Google employees can then choose from the page 
+  what projects to give to.  The group page will show who are the top donors.
+* *Leader*. Someone who has an idea that needs funding.
+* *Volunteer*. Someone who volunteers to help execute the project. For
+  example, in a scholarship project, the volunteer can help in buying the 
+  materials, or a volunteer can help in documenting the progress.
+* *Moderators*. Authorized website user that flags if projects are inappropriate.
 
 ## Use cases
 
-*Registering a user*
-User can register and login using their Facebook or Twitter account. Actually, 
-there is no registration page. Just ask the user to login via Facebook or 
-Twitter. Sharing a project or making a pledge does not need logging-in though.
+* Registering a user
+  User can register and login using their Facebook or Twitter account. Actually, 
+  there is no registration page. Just ask the user to login via Facebook or 
+  Twitter. Sharing a project or making a pledge does not need logging-in though.
 
 *Start a project*
 Registered users start a project.  A project requires a name, amount of money needed, deadline, and detailed description. Project can also have a number of attachments (e.g. PDF of cost breakdown), images, and videos to help convince donors. Video will be the primary way of presenting an idea. If the project has no video presentation after 1 month of creating the project, the project will be flagged as incomplete.
