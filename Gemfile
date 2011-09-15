@@ -25,6 +25,9 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :test do
-  # Pretty printed test output
-  gem 'turn', :require => false
+  gem 'turn', :require => false # Pretty printed test output
+  gem 'minitest'
+  gem 'mini_specunit' 
+  gem 'mini_backtrace'
+  gem 'mini_shoulda'
 end

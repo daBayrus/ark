@@ -2,7 +2,7 @@ class Authentication < ActiveRecord::Base
   belongs_to :user
 
   validates :user,     presence: true
-  validates :uid,      presence: true
+  validates :uid,      presence: true, uniqueness: { scope: :provider }
   validates :email,    presence: true
   validates :provider, presence: true
   validates :token,    presence: true
@@ -18,14 +18,14 @@ class Authentication < ActiveRecord::Base
 
       case auth["provider"].to_s.downcase
       when "facebook"
-        auth_hash[:email]    = auth["extra"]["user_hash"]["email"]          rescue nil
-        auth_hash[:uid]      = auth["extra"]["user_hash"]["id"]             rescue nil
-        auth_hash[:provider] = auth["provider"]                             rescue nil
-        auth_hash[:token]    = auth["credentials"]["token"]                 rescue nil
+        auth_hash[:email]    = auth["extra"]["user_hash"]["email"]  rescue nil
+        auth_hash[:uid]      = auth["extra"]["user_hash"]["id"]     rescue nil
+        auth_hash[:provider] = auth["provider"]                     rescue nil
+        auth_hash[:token]    = auth["credentials"]["token"]         rescue nil
 
         # Extra info not needed for auth but for populating profile
-        auth_hash[:name]      = auth["extra"]["user_hash"]["name"]          rescue nil
-        auth_hash[:image_url] = Facebook.image_url(auth_hash[:uid], :large) rescue nil
+        auth_hash[:name]       = auth["extra"]["user_hash"]["name"] rescue nil
+        auth_hash[:avatar_url] = Facebook.image_url(auth_hash[:id]) rescue nil
       else
         raise "Unsupported auth provider"
       end
@@ -42,7 +42,7 @@ class Authentication < ActiveRecord::Base
       user.authentications.create! auth_hash
       user
     end
-    
+
   end # class methods
 
 end
