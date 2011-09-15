@@ -8,6 +8,8 @@
 *.swp
 /assets
 config/database.yml
+config/facebook.yml
+config/twitter.yml
 /coverage
 db/*.sqlite3
 db/sphinx

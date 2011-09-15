@@ -1,8 +1,7 @@
 class CreateUsers < ActiveRecord::Migration
   def up
     create_table :users do |t|
-      t.string  :email     # Primary email of the user to be used for email notifications
-
+      t.integer  :profile_id  # refers to auth record for use as profile
       t.timestamps
     end
 
@@ -14,6 +13,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :uid        # user id set by auth provider
       t.string :name
       t.string :email
+      t.string :avatar_url
 
       t.timestamps
     end
