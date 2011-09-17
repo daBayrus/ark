@@ -1,0 +1,8 @@
+%h1 List of auth providers registed with the user
+
+%ul
+  - current_user.authentications.each do |auth|
+    %li
+      = auth.provider
+      = link_to "destroy", auth, method: :delete
+

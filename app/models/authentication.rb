@@ -20,12 +20,12 @@ class Authentication < ActiveRecord::Base
       when "facebook"
         auth_hash[:email]    = auth["extra"]["user_hash"]["email"]  rescue nil
         auth_hash[:uid]      = auth["extra"]["user_hash"]["id"]     rescue nil
-        auth_hash[:provider] = auth["provider"]                     rescue nil
+        auth_hash[:provider] = auth["provider"]
         auth_hash[:token]    = auth["credentials"]["token"]         rescue nil
 
         # Extra info not needed for auth but for populating profile
         auth_hash[:name]       = auth["extra"]["user_hash"]["name"] rescue nil
-        auth_hash[:avatar_url] = Facebook.image_url(auth_hash[:id]) rescue nil
+        auth_hash[:avatar_url] = Facebook.image_url(auth_hash[:uid]) rescue nil
       else
         raise "Unsupported auth provider"
       end
@@ -33,13 +33,13 @@ class Authentication < ActiveRecord::Base
       auth_hash 
     end
 
-    def connect_user_with_provider(auth_hash)
-      authentications.create! auth_hash
+    def connect_user_with_provider(user, auth_hash)
+      user.authentications.create! auth_hash
     end
 
     def create_user(auth_hash)
       user = User.create! 
-      user.authentications.create! auth_hash
+      connect_user_with_provider user, auth_hash
       user
     end
 

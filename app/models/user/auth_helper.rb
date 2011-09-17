@@ -6,7 +6,7 @@ module User::AuthHelper
   end
 
   def auth_token(provider)
-    authentications.where(provider: provider).first.token rescue nil
+    auth_provider(provider).token rescue nil
   end
 
   def auth_provider?(provider)

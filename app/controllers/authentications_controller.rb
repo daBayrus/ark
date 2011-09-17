@@ -2,7 +2,17 @@ class AuthenticationsController < ApplicationController
 
   def create
     handle_auth Authentication.extract_auth_info(env["omniauth.auth"])
+
+    redirect_to authentications_path # temporarily
   end
+
+  def destroy
+    auth = current_user.authentications.find(params[:id])
+    auth.destroy
+
+    redirect_to :back
+  end
+
 
 protected
 

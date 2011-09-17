@@ -3,6 +3,8 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.0'
 gem 'mysql2'
 gem 'omniauth'
+gem 'haml'
+gem 'simple_form'
 
 
 # Gems used only for assets and not required
@@ -22,12 +24,17 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :test do
-  gem 'turn', :require => false # Pretty printed test output
-  gem 'minitest'
-  gem 'mini_specunit' 
-  gem 'mini_backtrace'
-  gem 'mini_shoulda'
+  gem 'turn', :require => false
+  gem "rspec-rails"
+  gem "rspec-core"
+  gem "database_cleaner"
+  gem 'factory_girl_rails'
+  gem "shoulda"
+  gem "remarkable_date_validator"
+  gem "timecop"
+  gem "faker"
+  gem "webmock"
 end

@@ -1,3 +1,3 @@
 class User < ActiveRecord::Base
-   include User::AuthHelper
+  include User::AuthHelper
 end
