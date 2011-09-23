@@ -7,6 +7,8 @@ gem 'haml'
 gem 'simple_form'
 gem 'paperclip', :git => 'http://github.com/thoughtbot/paperclip.git'
 gem 'workflow'
+gem 'cancan'
+gem 'paper_trail', '~> 2'
 
 # Gems used only for assets and not required
 # in production environments by default.
