@@ -1,4 +1,4 @@
-class ProjectImage < ActiveRecord::Base
+class ProjectVideo < ActiveRecord::Base
   
   belongs_to :project
   
