@@ -2,6 +2,6 @@ class ProjectVideo < ActiveRecord::Base
   
   belongs_to :project
   
-  #TODO: attachment setup
+  has_attached_file :video, :styles => { :small => "150x150>", :large => "320x240>" }  
   
 end

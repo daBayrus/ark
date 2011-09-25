@@ -2,6 +2,6 @@ class ProjectDocument < ActiveRecord::Base
   
   belongs_to :project
   
-  #TODO: attachment setup
+  has_attached_file :document  
   
 end
