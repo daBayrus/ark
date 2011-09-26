@@ -1,16 +1,22 @@
 class Project < ActiveRecord::Base
   
   include Workflow
+  workflow_column :status
   
+  belongs_to :user
   has_many :project_images, :dependent => :destroy
   has_many :project_videos, :dependent => :destroy
   has_many :project_documents, :dependent => :destroy
   has_many :pledges, :dependent => :destroy
 
-  belongs_to :status
   validates :name, :presence => true
   validates :deadline, :presence => true
-    
+
+  scope :active_pledges, lambda {
+    joins(:pledges).
+    where("pledges.status in (?)", "'active', 'collected'")
+  }
+  
   workflow do
     state :new do
       event :mark_incomplete, :transitions_to => :incomplete
@@ -39,16 +45,12 @@ class Project < ActiveRecord::Base
     state :fulfilled 
   end
   
-  #TODO: is_funded? method
-  def is_funded?
-  end
-  
   def funds
-    pledges.collect(&:amount).sum
+    pledges.reject{|x| !Pledge::ACTIVE_STATES.include?(x.status) }.collect(&:amount).sum
   end
   
-  #TODO: has_funding? method
   def has_funding?
+    funds > 0
   end
 
   protected

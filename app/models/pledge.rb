@@ -1,7 +1,10 @@
 class Pledge < ActiveRecord::Base
   
-  include Workflow
+  ACTIVE_STATES = ["active", "collected"]
 
+  include Workflow
+  workflow_column :status
+  
   belongs_to :project
   belongs_to :user
   
