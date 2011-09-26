@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20110923155603) do
     t.float    "amount"
     t.integer  "user_id"
     t.integer  "project_id"
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -61,7 +62,7 @@ ActiveRecord::Schema.define(:version => 20110923155603) do
     t.string   "name"
     t.date     "deadline"
     t.float    "funding_required"
-    t.integer  "status_id"
+    t.string   "status"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"

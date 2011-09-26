@@ -4,6 +4,7 @@ class CreatePledges < ActiveRecord::Migration
       t.float :amount
       t.references  :user
       t.references  :project
+      t.string  :status
       t.timestamps
     end
   end

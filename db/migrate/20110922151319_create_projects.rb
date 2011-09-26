@@ -4,7 +4,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string  :name
       t.date  :deadline
       t.float :funding_required
-      t.references  :status
+      t.string  :status
       t.references  :user
       t.timestamps
     end
