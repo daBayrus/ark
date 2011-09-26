@@ -2,5 +2,10 @@
 
 FactoryGirl.define do
   factory :project do
-    end
+    name  'Project Name'
+    deadline  Date.today + 25
+    funding_required  125
+
+    association :user    
+  end
 end
