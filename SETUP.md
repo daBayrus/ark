@@ -28,8 +28,20 @@ development:
   app_id:     "YOUR_APP_ID"
   secret_key: "YOUR_SECRET_KEY"
 
+### Setup config/sunspot.yml
+
+development:
+  solr:
+    hostname: localhost
+    port: 8982
+    log_level: INFO
+
 ### Setup your database
 
 * rake db:migrate
 * rake db:seed
 * rake db:populate # Optional, to load sample records. This will reset your db.
+
+### Start other services
+
+* rake sunspot:solr:start

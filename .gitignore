@@ -10,12 +10,15 @@
 config/database.yml
 config/facebook.yml
 config/twitter.yml
+config/sunspot.yml
 /coverage
 db/*.sqlite3
 db/sphinx
 config/*.sphinx.conf
 log/*.log
 log/*.pid
+log/*.lck
+solr/data/
 tmp
 pages/output/*
 public/*.html
