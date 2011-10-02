@@ -1,0 +1,15 @@
+development:
+  solr:
+    hostname: localhost
+    port: 8982
+    log_level: INFO
+
+test: &TEST
+  solr:
+    hostname: localhost
+    port: 8983
+    log_level: INFO
+    
+cucumber:
+  <<: *TEST
+    
