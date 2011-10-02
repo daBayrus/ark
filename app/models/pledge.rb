@@ -1,6 +1,7 @@
 class Pledge < ActiveRecord::Base
   
   ACTIVE_STATES = ["active", "collected"]
+  MINIMUM_AMOUNT = 2
 
   include Workflow
   workflow_column :status

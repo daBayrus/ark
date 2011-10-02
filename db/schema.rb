@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110923155603) do
+ActiveRecord::Schema.define(:version => 20111002052156) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -25,6 +25,21 @@ ActiveRecord::Schema.define(:version => 20110923155603) do
     t.datetime "updated_at"
   end
 
+  create_table "delayed_jobs", :force => true do |t|
+    t.integer  "priority",   :default => 0
+    t.integer  "attempts",   :default => 0
+    t.text     "handler"
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
+
   create_table "pledges", :force => true do |t|
     t.float    "amount"
     t.integer  "user_id"
@@ -35,26 +50,12 @@ ActiveRecord::Schema.define(:version => 20110923155603) do
   end
 
   create_table "project_documents", :force => true do |t|
-    t.string  "name"
-    t.string  "doc_file_name"
-    t.string  "doc_content_type"
-    t.integer "doc_file_size"
+    t.string  "document"
     t.integer "project_id"
   end
 
   create_table "project_images", :force => true do |t|
-    t.string  "name"
-    t.string  "image_file_name"
-    t.string  "image_content_type"
-    t.integer "image_file_size"
-    t.integer "project_id"
-  end
-
-  create_table "project_videos", :force => true do |t|
-    t.string  "name"
-    t.string  "video_file_name"
-    t.string  "video_content_type"
-    t.integer "video_file_size"
+    t.string  "image"
     t.integer "project_id"
   end
 
@@ -62,14 +63,10 @@ ActiveRecord::Schema.define(:version => 20110923155603) do
     t.string   "name"
     t.date     "deadline"
     t.float    "funding_required"
+    t.text     "description"
+    t.text     "video_link"
     t.string   "status"
     t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "statuses", :force => true do |t|
-    t.string   "name",       :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
