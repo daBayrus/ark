@@ -7,6 +7,8 @@ require 'rspec/rails'
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
+Sunspot.session = Sunspot::Rails::StubSessionProxy.new(Sunspot.session) 
+
 RSpec.configure do |config|
   # == Mock Framework
   #
