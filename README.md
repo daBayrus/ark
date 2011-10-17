@@ -53,7 +53,7 @@ Note: We deduct a 5% to the project cost to cover credit card transaction fees, 
 
 When flagging, the moderators must include a reason why the projects was flagged.  All moderators can see the reasons for flagging.
 
-*Joining as volunteer*. A registered user can join a project as a volunteer. The leader can view the volunteer’s name and email.
+*Joining as volunteer*. A registered user can join a project as a volunteer. The leader can view the volunteer’s name and email. It should be set in the project if it is looking for money and/or volunteers.
 
 Group-related cases are for further discussions.
 
@@ -85,18 +85,39 @@ Group-related cases are for further discussions.
 *Scale*. How can we get more people involve?
 
 
-## Business Assumptions
+## Assumptions
 
-## Product Assumptions
-
-## Conversion Assumptions
+* Video is more effective than text+images in convinving people to pledge.
+* People are willing to share socio-civic projects. When are they more willing to share (with or without a pledge)?
+* What is the minimum amount people are willing to pledge? How can we increase the pledges?
 
 
 ## MVP's
 
-1. *Start a project and collect pledges*. Since projects are expected to be created at least 1 month before it's deadline, we have a month to learn if people are willing to pledge and/or volunteer. If we get traction, we shall implement the pledge collection.
+### *Validate pledges*.
 
-2. *Group accounts*.
+#### Assumption
+
+Video is more effective than text+images in convinving people to pledge.
+
+#### Features
+
+* Start with 3 projects. 
+* No need to create a UI for adding a project. All projects will be manually added.
+* Pledge requires a Facebook login.
+* Pledges are in 50, 100, and empty field (all in pesos). Make a note that the money will be collected only if pledges meet project `goal. 
+* A page listing all the projects (no browsing, no search).
+* Each project page will include the videos, images, and description.
+* A page explaining what we are building.
+
+#### Schedule
+
+1st week of November.
+
+### Metrics
+
+* Visits x pledges
+
 
 ## Risks
 
@@ -105,13 +126,18 @@ Group-related cases are for further discussions.
 * Project leaders and donors will be turned-off by the 5% markup.
 * Payment gateway surchage becomes prohibited.
 * How can we ensure transparency and accountability? What to do if there is fund misuse?
-*
+
 ### Technical Risks
+
+* Security
+* Spam projects
 
 ## Components
 * Pledge. Tracking of pledges, collection, followups, and receipts.
 * Social Network. Integration with facebook and twitter.
 
 
+## Random Ideas
 
-
+* Aside from starting a project, how about posting problems, getting suggestions, and the most voted suggestion can be promoted to the community project.
+* Posting projects that need a "Leader".
