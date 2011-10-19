@@ -33,3 +33,12 @@ describe User do
 
 end
 
+# == Schema Information
+#
+# Table name: users
+#
+#  id         :integer(4)      not null, primary key
+#  created_at :datetime
+#  updated_at :datetime
+#
+

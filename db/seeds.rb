@@ -1,7 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+def random_users
+  count = User.count
+  ids   = 1.upto(count).collect{ rand(count) + 1 }.uniq
+  User.where(:id => ids)
+end
+
+plant :users
+plant "projects"
+plant "pledges"

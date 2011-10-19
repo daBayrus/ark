@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20111002052156) do
     t.string   "name"
     t.string   "email"
     t.string   "avatar_url"
+    t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -54,15 +55,11 @@ ActiveRecord::Schema.define(:version => 20111002052156) do
     t.integer "project_id"
   end
 
-  create_table "project_images", :force => true do |t|
-    t.string  "image"
-    t.integer "project_id"
-  end
-
   create_table "projects", :force => true do |t|
     t.string   "name"
     t.date     "deadline"
-    t.float    "funding_required"
+    t.float    "cost"
+    t.text     "pitch"
     t.text     "description"
     t.text     "video_link"
     t.string   "status"
@@ -72,7 +69,6 @@ ActiveRecord::Schema.define(:version => 20111002052156) do
   end
 
   create_table "users", :force => true do |t|
-    t.integer  "profile_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

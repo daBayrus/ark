@@ -1,7 +1,6 @@
 class CreateUsers < ActiveRecord::Migration
   def up
     create_table :users do |t|
-      t.integer  :profile_id  # refers to auth record for use as profile
       t.timestamps
     end
 
@@ -14,6 +13,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.string :avatar_url
+      t.string :location
 
       t.timestamps
     end

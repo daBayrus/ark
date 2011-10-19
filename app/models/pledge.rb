@@ -8,14 +8,22 @@ class Pledge < ActiveRecord::Base
   
   belongs_to :project
   belongs_to :user
-  
-  validates :amount, :numericality => {:greater_than_or_equal_to => 2}
+
+  validates :project, :presence => true
+  validates :user,    :presence => true
+  validates :amount,  :numericality => { :greater_than_or_equal_to => 1 }
+
+  attr_accessible :amount
   
   workflow do
-    state :new
-    state :active #not yet charged
-    state :collected #charged pledge
+    state :active    # not yet collected
+    state :collected # charged pledge
     state :cancelled
   end
   
+
+  default_scope order("created_at DESC")
+  scope :active, where("status in (?)", ACTIVE_STATES)
+  
 end
+

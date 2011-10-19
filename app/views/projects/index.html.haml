@@ -1,0 +1,15 @@
+%h1 List of projects
+
+%ul
+  - @projects.each do |project|
+    %li
+      %h2= link_to project.name, project
+      %h3= project.cost
+      Funded:
+      = number_to_percentage project.total_pledges_percentage, :precision => 0 
+      %br/
+      Pledged:
+      = project.total_pledges_amount
+      %br/
+      = time_ago_in_words(project.deadline)
+      left

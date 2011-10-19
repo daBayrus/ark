@@ -3,7 +3,7 @@ class AuthenticationsController < ApplicationController
   def create
     handle_auth Authentication.extract_auth_info(env["omniauth.auth"])
 
-    redirect_to authentications_path # temporarily
+    redirect_to request.env['omniauth.origin'] || :authentications
   end
 
   def destroy
@@ -11,6 +11,16 @@ class AuthenticationsController < ApplicationController
     auth.destroy
 
     redirect_to :back
+  end
+
+  def logout
+    if current_user
+      session[:user_id] = nil
+      session.delete :user_id
+      flash[:notice] = "You have logged out"
+    end
+
+    redirect_to root_url
   end
 
 

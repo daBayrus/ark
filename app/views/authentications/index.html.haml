@@ -3,6 +3,11 @@
 %ul
   - current_user.authentications.each do |auth|
     %li
+      = auth.email
+      %br/
+      = auth.name
+      %br
+      = image_tag auth.avatar_url
       = auth.provider
       = link_to "destroy", auth, method: :delete
 

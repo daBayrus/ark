@@ -1,0 +1,22 @@
+%h1= @project.name
+
+.description
+  = @project.description  # TODO: Use markdown?
+
+
+%h3
+  = link_to "Support this project", [:new, @project, :pledge]
+
+%h4 Pledges
+
+%ul
+  - @project.pledges.each do |pledge|
+    - user = pledge.user
+    %li
+      = user.name
+      %br/
+      = image_tag user.avatar_url
+      %br/
+      = user.location
+      %br/
+      = pledge.created_at

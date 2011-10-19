@@ -10,8 +10,11 @@ gem 'cancan'
 gem 'paper_trail', '~> 2'
 gem 'carrierwave'
 gem 'delayed_job'
-gem 'sunspot', '1.2.rc4'
-gem 'sunspot_rails', '1.2.rc4'
+
+
+# Not needed for now
+#gem 'sunspot', '1.2.rc4'
+#gem 'sunspot_rails', '1.2.rc4'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -31,6 +34,11 @@ gem 'jquery-rails'
 
 # To use debugger
 gem 'ruby-debug19', :require => 'ruby-debug'
+
+group :development do
+  gem 'seedbed'
+  gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
+end
 
 group :test do
   gem 'turn', :require => false

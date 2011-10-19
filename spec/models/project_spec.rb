@@ -121,3 +121,19 @@ describe Project do
   end
   
 end
+# == Schema Information
+#
+# Table name: projects
+#
+#  id          :integer(4)      not null, primary key
+#  name        :string(255)
+#  deadline    :date
+#  cost        :float
+#  description :text
+#  video_link  :text
+#  status      :string(255)
+#  user_id     :integer(4)
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+

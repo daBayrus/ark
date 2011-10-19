@@ -1,0 +1,5 @@
+%h1= @project.name
+
+= simple_form_for [@project, @pledge] do |f|
+  = f.input :amount
+  = f.submit "Pledge"

@@ -51,3 +51,19 @@ describe Authentication do
 
 
 end
+# == Schema Information
+#
+# Table name: authentications
+#
+#  id         :integer(4)      not null, primary key
+#  user_id    :integer(4)
+#  provider   :string(255)
+#  token      :string(255)
+#  uid        :string(255)
+#  name       :string(255)
+#  email      :string(255)
+#  avatar_url :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+

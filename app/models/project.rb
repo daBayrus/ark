@@ -1,24 +1,18 @@
 class Project < ActiveRecord::Base
-  
   include Workflow
   workflow_column :status
   
   belongs_to :user
-  has_many :project_images, :dependent => :destroy
   has_many :project_documents, :dependent => :destroy
   has_many :pledges, :dependent => :destroy
 
-  validates :name, :presence => true
+  validates :name,     :presence => true
   validates :deadline, :presence => true
 
   after_create :review_new_requirements
   after_update :review_requirements
   
-  scope :active_pledges, lambda {
-    joins(:pledges).
-    where("pledges.status in (?)", "'active', 'collected'")
-  }
-  
+ 
   workflow do
     state :new do
       event :mark_incomplete, :transitions_to => :incomplete
@@ -45,37 +39,41 @@ class Project < ActiveRecord::Base
     state :fulfilled 
   end
   
-  searchable do
-    text :name, :description, :video_link, :stored => true
-    string :name
-    date  :deadline    
-    integer :user_id
-    string  :status
-    float :funding_required
-    float :funding_percentage, :using => :funding_percentage
-    time :created_at
+  #searchable do
+  #  text :name, :description, :video_link, :stored => true
+  #  string :name
+  #  date  :deadline    
+  #  integer :user_id
+  #  string  :status
+  #  float :cost
+  #  float :funding_percentage, :using => :funding_percentage
+  #  time :created_at
 
-    string :sort_name do
-      name.downcase if name = self.name
-    end
-    
-    string :sort_status do
-      status.downcase if status = self.status
-    end
-    
-    float :sort_funding_required do
-      funding_required.to_f
-    end
-  end  
+  #  string :sort_name do
+  #    name.downcase if name = self.name
+  #  end
+  #  
+  #  string :sort_status do
+  #    status.downcase if status = self.status
+  #  end
+  #  
+  #  float :sort_funding_required do
+  #    funding_required.to_f
+  #  end
+  #end  
   
-  #sums only amount of active pledges
-  def funds
-    pledges.reject{|x| !Pledge::ACTIVE_STATES.include?(x.status) }.collect(&:amount).sum
+
+  
+  def total_pledges_amount
+    pledges.active.sum(:amount)
   end
 
-  #computes percentage of funds acquired against funding required
-  def funding_percentage
-    funds / funding_required * 100
+  def total_pledges_percentage
+    (total_pledges_amount / cost * 100).truncate
+  end
+
+  def days_left_to_deadline
+    deadline - time.now
   end
   
   #determines if project has started receiving funds
@@ -103,3 +101,4 @@ class Project < ActiveRecord::Base
   end
       
 end
+
