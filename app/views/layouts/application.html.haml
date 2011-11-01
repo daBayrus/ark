@@ -7,13 +7,30 @@
     = csrf_meta_tags
 
   %body
-    - if user_signed_in?
-      = current_user.name
-      = image_tag current_user.avatar_url
-      %br/
-      = link_to "logout", [:logout, :authentications]
-    - else
-      = link_to "Facebook", "/auth/facebook" 
-
+    .topbar-wrapper(style="z-index:5;")
+      .topbar(data-dropdown="dropdown")
+        .topbar-inner
+          .container
+            %h3
+              %a.brand(href="#") Project Ark
+            %ul.nav
+              %li.active
+                %a(hreaf="#") Home
+              %li
+                %a(hreaf="#") About Us
+              %li
+                %a(hreaf="#") Contact Us
+              %li
+                %a(hreaf="#") Help
+              %li
+                %a(hreaf="#") FAQ
+              %li
+                - if user_signed_in?
+                  = current_user.name
+                  = image_tag current_user.avatar_url
+                  %br/
+                  = link_to "logout", [:logout, :authentications]
+                - else
+                  = link_to "Facebook", "/auth/facebook"
 
     = yield

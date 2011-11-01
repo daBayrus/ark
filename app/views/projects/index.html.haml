@@ -1,15 +1,154 @@
-%h1 List of projects
+.container(style="margin-top: 40px")
+  #main
+    .row
+      .span8
+        .row
+          .home-widget.span4
+            .project-card-wrap
+              .project-card
+                .project-thumbnail
+                  %a
+                    %img(alt="Photo-little" class="projectphoto-little" height="150" src="assets/photo-little-1.jpg" width="200")
+                %h2
+                  %strong
+                    = link_to "Willard Asylum Suitcase Documentation", "projects/1"
+                  %span by Jon Crispin
+                %p
+                  I am photographing a collection of suitcases left behind by residents of the Willard Psychiatric Center in Willard, NY
 
-%ul
-  - @projects.each do |project|
-    %li
-      %h2= link_to project.name, project
-      %h3= project.cost
-      Funded:
-      = number_to_percentage project.total_pledges_percentage, :precision => 0 
-      %br/
-      Pledged:
-      = project.total_pledges_amount
-      %br/
-      = time_ago_in_words(project.deadline)
-      left
+                .project-pledged-wrap
+                  .project-pledged(style="width: 76.3%")
+
+                %ul.project-stats
+                  %li.first
+                    %strong 76%
+                    funded
+                  %li
+                    %strong P12,000
+                    pledged
+                  %li.last
+                    %strong 5
+                    days left
+
+          .home-editorial.span4
+            .home-editorial-title Project of the Day
+            %p
+              Until the 1960s, patients checking in to Willard Psychiatric Center brought along a suitcase full of personal items, ready for when they left. 50 years later many of the suitcases are still intact and Jon Crispin has the unique opportunity to photograph their incredible contents.
+
+      .span8
+        .row
+          .home-widget.span4
+            .project-card-wrap
+              .project-card
+                .project-thumbnail
+                  %a
+                    %img(alt="Photo-little" class="projectphoto-little" height="150" src="assets/photo-little-2.jpg" width="200")
+                %h2
+                  %strong
+                    %a(href="#") Cloth Book of the Month
+                  %span by Victoria van der Laan
+                %p
+                  Bringing high quality, affordable, 100% organic cloth books to babies everywhere!
+
+                .project-pledged-wrap
+                  .project-pledged(style="width: 100%")
+
+                %ul.project-stats
+                  %li.first
+                    %strong 231%
+                    funded
+                  %li
+                    %strong P38,000
+                    pledged
+                  %li.last
+                    %strong 16
+                    days left
+
+          .home-editorial.span4
+            .home-editorial-title Crafts
+            %p
+              Victoria van der Laan makes children's books by printing images onto cloth and sewing them together. Join her Book of the Month club and receive a super soft organic cotton book every month, with illustrations inspired by themes like science, mammals, and nature.
+
+    .row
+      .span8
+        .row
+          .home-widget.span4
+            .project-card-wrap
+              .project-card
+                .project-thumbnail
+                  %a
+                    %img(alt="Photo-little" class="projectphoto-little" height="150" src="assets/photo-little-3.jpg" width="200")
+                %h2
+                  %strong
+                    %a(href="#") Retro Punch Boxes for Valentine's Day
+                  %span by Lea Redmond
+                %p
+                  A unique hand-crafted object to give to loved ones. Inspired by a fun and forgotten vintage toy. Filled with whimsical words.
+
+                .project-pledged-wrap
+                  .project-pledged(style="width: 19%")
+
+                %ul.project-stats
+                  %li.first
+                    %strong 19%
+                    funded
+                  %li
+                    %strong P50
+                    pledged
+                  %li.last
+                    %strong 8
+                    days left
+
+          .home-editorial.span4
+            .home-editorial-title Sculpture
+            %p
+              Popularized as a party game in the 1920s, punch boxes contain tiny paper scrolls that are only revealed when punched out. Lea Redmond is making her own version for Valentine's Day, full of adorable messages like, "You are so awesome I would loan you my favorite wool sweater."
+
+      .span8
+        .row
+          .home-widget.span4
+            .project-card-wrap
+              .project-card
+                .project-thumbnail
+                  %a
+                    %img(alt="Photo-little" class="projectphoto-little" height="150" src="assets/photo-little-4.jpg" width="200")
+                %h2
+                  %strong
+                    %a(href="#") The Cartoonuum
+                  %span by Ray Sumser
+                %p
+                  A crowd-sourced painting of over 2,000 recognizable cartoon, comic book and video game characters.
+
+                .project-pledged-wrap
+                  .project-pledged(style="width: 100%")
+
+                %ul.project-stats
+                  %li.first
+                    %strong 124%
+                    funded
+                  %li
+                    %strong P125,000
+                    pledged
+                  %li.last
+                    %strong 2
+                    hours left
+
+          .home-editorial.span4
+            .home-editorial-title Comics
+            %p
+              Ray Sumser is creating a giant 7' x 11' oil painting featuring over 2000 recognizable cartoon, comic book, and video game characters. With over 1500 characters drawn already, you can follow along and suggest characters for $1.
+
+-#
+  %ul
+    - @projects.each do |project|
+      %li
+        %h2= link_to project.name, project
+        %h3= project.cost
+        Funded:
+        = number_to_percentage project.total_pledges_percentage, :precision => 0
+        %br/
+        Pledged:
+        = project.total_pledges_amount
+        %br/
+        = time_ago_in_words(project.deadline)
+        left

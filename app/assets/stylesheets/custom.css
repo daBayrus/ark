@@ -1,0 +1,341 @@
+body { padding-top: 40px }
+a { text-decoration: none; }
+a.button, input.button {
+  cursor: pointer;
+  border: 0;
+  font-weight: bold;
+  background-color: #55A4F2;
+  color: white;
+  padding: 5px 15px;
+  font-size: 1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: middle;
+  display: block;
+  border: 0;
+}
+
+#main { padding: 20px 0 40px;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.home-widget {
+  padding-right: 0;
+}
+
+.home-editorial {
+  color: #666;
+  font-family: Helvetica,Arial,Sans-Serif;
+  font-size: 14px;
+  width: 180px;
+  margin: 50px 40px 0 10px;
+}
+
+.home-editorial-title {
+  color: #333;
+  font-family: Helvetica,Arial,Sans-Serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid #CCC;
+}
+
+.project-card-wrap {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  background: #EEE;
+  padding: 4px;
+  margin-bottom: 20px;
+  clear: both;
+}
+
+.project-card-wrap .project-card {
+  padding: 5px;
+  background-position: 0 307px;
+  height: 360px;
+  overflow: hidden;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  background-color: white;
+  border: 1px solid #DDD;
+  position: relative;
+  background-color: white;
+  background-image: url(bg-card-gradient.png);
+  background-repeat: repeat-x;
+}
+
+.project-card-wrap .project-card h2 {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 15px;
+  padding: 0 5px;
+  margin-bottom: 5px;
+}
+
+.project-card-wrap .project-card h2 strong {
+  display: block;
+  max-height: 30px;
+  overflow: hidden;
+}
+
+.project-card-wrap .project-card h2 span {
+  display: block;
+  font-size: 11px;
+  max-height: 15px;
+  overflow: hidden;
+  color: #999;
+  font-weight: normal;
+  padding-top: 2px;
+}
+
+.project-card-wrap .project-card p {
+  color: #999!important;
+  padding: 0 5px;
+  font-size: 12px!important;
+  line-height: 15px;
+  height: 60px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: word-break;
+}
+
+.project-card-wrap .project-card .project-pledged-wrap {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 43px;
+  left: 10px;
+  width: 190px;
+  height: 8px;
+  background: #DDD;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.project-card-wrap .project-card .project-pledged-wrap .project-pledged {
+  background: #87C442;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+  height: 8px;
+}
+
+.project-card-wrap .project-card ul.project-stats {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  bottom: 5px;
+  left: 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+  position: absolute;
+  color: #999;
+}
+
+.project-card-wrap .project-card ul.project-stats li {
+  width: auto!important;
+  border: 0;
+  line-height: 17px;
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.project-card-wrap .project-card ul.project-stats strong {
+  font-size: 11px;
+  line-height: 11px;
+  margin: 0;
+  padding-top: 2px;
+  display: block;
+  color: #666;
+  font-weight: bold;
+}
+
+.project-card-wrap .project-card ul.project-stats li:first-child, .project-card-wrap .project-card ul.project-stats li.first {
+  padding-left: 0;
+}
+
+.project-card-wrap .project-card ul.project-stats li.first {
+  overflow: hidden;
+  border-left: 0;
+}
+
+.project-card-wrap .project-card ul.project-stats li.last {
+  padding-right: 0;
+  border-right: 0;
+}
+
+
+/**
+ * Project Details
+ */
+
+#running-board-wrap {
+	border-bottom: 1px solid #CCC;
+	background: #EDEBE1;
+}
+
+#running-board-wrap #running-board {
+  padding-top: 20px;
+}
+
+#content-wrap #content {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.projects-content {
+  margin-bottom: 60px;
+}
+
+.projects-content #about {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #666;
+}
+
+.projects-content h3.dotty {
+  font-weight: bold;
+  margin: 0 0 1em 0;
+  padding: 4px 0;
+  border-bottom: 1px dotted #999;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.projects-content #about p {
+  word-wrap: break-word;
+  line-height: 22px;
+  font-size: 13px;
+}
+
+.projects-ecom-wrap {
+  margin-left: 50px;
+}
+
+.projects-ecom {
+  background-color: #E7E7E7;
+  padding: 1em 20px 0 20px;
+  border-bottom: 1px solid #CCC;
+  position: relative;
+}
+
+.projects-ecom h5 {
+  text-transform: uppercase;
+  font-family: Helvetica,Arial,sans serif;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.projects-ecom h5 .num {
+  font-size: 48px;
+  display: block;
+}
+
+.projects-ecom #banner {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  background: #555;
+  margin: 20px -30px;
+  padding: 10px 30px 20px 30px;
+  font-size: 12px;
+  line-height: 16px;
+  background-image: url(banner-wings.gif);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  }
+
+.projects-ecom #pledge-wrap {
+  margin-bottom: 20px;
+}
+
+.projects-ecom #pledge-wrap #button-back-this-proj {
+  background-color: #87C442;
+  font-size: 18px;
+  padding: 15px 20px;
+}
+
+.projects-ecom #pledge-wrap .button {
+  display: block;
+  width: 200px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.projects-ecom #pledge-wrap #button-back-this-proj small {
+  display: block;
+  font-size: 11px;
+  line-height: 12px;
+}
+
+.projects-backers {
+  overflow: hidden;
+  background: #EEE;
+  border-top: 1px solid white;
+  color: #333;
+  font-size: 11px;
+  padding: 19px 15px 19px 20px;
+  word-wrap: break-word;
+}
+
+.projects-backers h3 {
+  text-transform: uppercase;
+  margin-bottom: .25em;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 3px 0;
+  margin-bottom: 4px;
+  line-height: 23px;
+}
+
+.video-player {
+  position: relative;
+}
+
+.video-player .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-player .button-playvideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(button-playvideo.png) no-repeat center center;
+}

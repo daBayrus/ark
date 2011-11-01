@@ -1,22 +1,80 @@
-%h1= @project.name
+#running-board-wrap
+  .container#running-board
+    #project-header
+      .project-running-board
+        #headrow
+          %h1#name
+            %a(href="#")
+              Willard Asylum Suitcase Documentation
+            %p
+              %span A Photography project in Albany, NY by Jon Crispin
 
-.description
-  = @project.description  # TODO: Use markdown?
+#content-wrap
+  .container#content
+    .row.projects-content
+      .span9
+        #video-section
+          .video-player(data-image="http://s3.amazonaws.com/ksr/projects/51522/photo-full.jpg?1317316791" data-video="http://s3.amazonaws.com/ksr/projects/51522/video-56073-h264_high.mp4" style="height: 420px; width: 560px;")
+            .overlay(style="line-height: 420px")
+              %span.button-playvideo
+              %img(src="http://s3.amazonaws.com/ksr/projects/51522/photo-full.jpg?1317316791")
 
+        #about
+          %h3.dotty About this Project
+          %p
+            In 1995, the New York State Museum was moving items out of the Willard Psychiatric Center in Willard, NY which was being closed by the State Office of Mental Health. &nbsp;It would eventually become a state-run drug rehabilitation center. &nbsp;Craig Williams and his staff became aware of an attic full of suitcases in the pathology lab building. &nbsp;The cases were put into storage when their owners were admitted to Willard sometime between 1910 and the 1960s. And since the facility was set up to help people with chronic mental illness, these folks never left. &nbsp;An exhibit of a small selection of the cases was produced by the Museum and was on display in Albany in 2003. &nbsp;It was very moving to read the stories of these people, and to see objects from their lives before they became residents of Willard.
+          %p
+            I have been given the incredible opportunity to photograph these cases and their contents. &nbsp;To me, they open a small window into the lives of some of the people who lived at the facility. &nbsp;I have settled on the idea of shooting the suitcases as they have been preserved by the museum, since part of my goal with this project is to show the care that was taken in archiving these materials. &nbsp;You can see the genesis of my approach to this documentation on my wordpress site.
+          %p
+            Thanks so much for your consideration and support.
 
-%h3
-  = link_to "Support this project", [:new, @project, :pledge]
+      .span7
+        .projects-ecom-wrap
+          .projects-ecom
+            %h5
+              .num 132
+              Backers
+            %h5
+              .num P12,000
+              Pledged of P18,000 goal
+            %h5
+              .num 5
+              days to go
 
-%h4 Pledges
+            #banner This project will be funded on Thursday Nov 17, 12:00PM PHT
+            #pledge-wrap
+              %a.button.roundsmall#button-back-this-proj
+                Back This Project
+                %small P10 minimum pledge
 
-%ul
-  - @project.pledges.each do |pledge|
-    - user = pledge.user
-    %li
-      = user.name
-      %br/
-      = image_tag user.avatar_url
-      %br/
-      = user.location
-      %br/
-      = pledge.created_at
+          .projects-backers
+            %h3 132 Project Backers
+            %ul
+              %li Joel Lagana
+              %li Greg Moreno
+              %li Neil Decapia
+              %li Don Gracia
+              %li Caloy Macabunga
+
+-#
+  %h1= @project.name
+
+  .description
+    = @project.description  # TODO: Use markdown?
+
+  %h3
+    = link_to "Support this project", [:new, @project, :pledge]
+
+  %h4 Pledges
+
+  %ul
+    - @project.pledges.each do |pledge|
+      - user = pledge.user
+      %li
+        = user.name
+        %br/
+        = image_tag user.avatar_url
+        %br/
+        = user.location
+        %br/
+        = pledge.created_at
